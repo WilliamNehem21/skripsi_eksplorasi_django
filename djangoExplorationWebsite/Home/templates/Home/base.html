@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"-->
+    {% include "snippets/styles.html" %}
+    <title> {{judul}} | Eksplorasi Django</title>
+</head>
+<body>
+    <div class='container'>
+        
+        {% include "snippets/navbar.html" %}
+        
+        {% comment %} <nav>
+            <ul>
+                {% for link,nama in nav %}
+                    <li><a href=" {{link}} ">{{nama}}</a></li>
+        
+                {% endfor %}
+            </ul>
+        </nav> {% endcomment %}
+
+        {% comment %} <h1>Selamat Datang di Eksplorasi Django</h1>
+        <h2>Halo {{nama}}</h2> {% endcomment %}
+
+        <div class="mt-4 p-5 bg-light text-gray rounded">
+            <h1>Selamat Datang di Eksplorasi Django</h1>
+            <h2>Halo {{nama}}</h2>
+        </div>
+
+
+
+        <div class="container bg-dark text-white shadow">
+            <div class="row" style="height:300px">
+                {% block isi %}
+
+                {% endblock isi %}
+            </div>
+        </div>
+
+    </div>
+    
+    {% include "snippets/script.html" %}
+    </body>
+</html>

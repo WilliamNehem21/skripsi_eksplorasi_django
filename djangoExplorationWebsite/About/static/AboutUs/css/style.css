@@ -1,0 +1,31 @@
+#logo{
+    width: 50%;
+}
+
+h1{
+    font-family: Cambria;
+}
+
+nav ul{
+    background: #95edad;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav a{
+    color: #0f3018;
+    font-family:  sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+nav li{
+    float: left;
+}
+
+nav a:hover{
+    background-color: #20e655;
+}

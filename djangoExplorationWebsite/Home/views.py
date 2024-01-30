@@ -8,5 +8,6 @@ def index(request):
         'nav': [
             ['/about', 'about'],
         ],
+        'logo': 'Home/image/django logo.png',
     }
     return render(request, 'Home/home.html', context)

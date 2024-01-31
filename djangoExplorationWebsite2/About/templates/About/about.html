@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'About/css/style.css' %}">
+    <title>{{judul}} | Eksplorasi Django</title>
+    
+</head>
+<body> 
+
+    <nav>
+        <ul>
+            {% for link, nama in nav %}
+                <li><a href="{{link}}">{{nama}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <h1>judul</h1>
+
+    
+</body>
+</html>

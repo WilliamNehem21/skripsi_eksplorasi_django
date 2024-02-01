@@ -5,7 +5,7 @@ from .models import Home
 def index(request):
     users = Home.objects.all()
     context = {
-        'nama': 'John Doe',
+        'nama': users.get(nama = "John Doe").nama,
         'users': users,
         'judul': 'Home',
         'nav': [

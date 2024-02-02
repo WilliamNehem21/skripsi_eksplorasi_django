@@ -44,7 +44,20 @@
             </div>
         </div>
 
+        <form method="post">
+            {% csrf_token %}
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email"></input>
+            <br>
+            <label for="saran">Saran:</label>
+            <input type="textbox" name="saran" id="saran"></input>
+            <br>
+            <button type="Submit">Submit</button>
+        </form>
+
     </div>
+
+
     
     {% include "snippets/script.html" %}
     </body>

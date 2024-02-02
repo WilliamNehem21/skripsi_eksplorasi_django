@@ -55,6 +55,23 @@
             <button type="Submit">Submit</button>
         </form>
 
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{home_form.email.label_tag}}
+                {{home_form.email}}
+                {{home_form.saran.label_tag}}
+                {{home_form.saran}}
+            </div>
+
+            <table>
+                {{home_form.as_table}}
+            </table>
+            
+            <br>
+            <button type="Submit">Submit</button>
+        </form>
+
     </div>
 
 

@@ -1,12 +1,7 @@
 from django.shortcuts import render
 from .models import Home
 from django.http import HttpResponse
-from django import forms
-
-class HomeForm(forms.Form):
-    email = forms.CharField()
-    saran = forms.CharField()
-
+from .forms import HomeForm
 # Create your views here.
 def index(request):
     home_form = HomeForm()
@@ -24,6 +19,7 @@ def index(request):
             ['/about', 'about'],
         ],
         'logo': 'Home/image/django logo.png',
+        'home_form': home_form,
     }
     return render(request, 'Home/home.html', context)
 

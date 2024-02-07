@@ -44,6 +44,7 @@
             </div>
         </div>
 
+        <!--
         <form method="post">
             {% csrf_token %}
             <label for="email">Email:</label>
@@ -53,16 +54,16 @@
             <input type="textbox" name="saran" id="saran"></input>
             <br>
             <button type="Submit">Submit</button>
-        </form>
+        </form> -->
 
         <form method="post">
             {% csrf_token %}
-            <div class="form-group">
+            {% comment %} <div class="form-group">
                 {{home_form.email.label_tag}}
                 {{home_form.email}}
                 {{home_form.saran.label_tag}}
                 {{home_form.saran}}
-            </div>
+            </div> {% endcomment %}
 
             <table>
                 {{home_form.as_table}}

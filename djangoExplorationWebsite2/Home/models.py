@@ -15,7 +15,7 @@ class Home(models.Model):
 
 class Saran(models.Model):
     email = models.EmailField()
-    saran = models.CharField()
+    saran = models.TextField()
 
     def __str__ (self):
         return "{}".format(self.email)

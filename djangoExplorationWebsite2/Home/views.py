@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Home
+from .models import Home, Saran
 from django.http import HttpResponse
 from .forms import HomeForm
 # Create your views here.
@@ -9,6 +9,10 @@ def index(request):
     if(request.method == "POST"):
         email = request.POST['email']
         saran = request.POST['saran']
+        Saran.objects.create(
+            email = email,
+            saran = saran
+        )
         print(email, saran)
     #print(request.POST)
     context = {

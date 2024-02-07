@@ -12,3 +12,10 @@ class Home(models.Model):
     def save(self):
         self.slug = slugify(self.nama)
         super(Home, self).save()
+
+class Saran(models.Model):
+    email = models.EmailField()
+    saran = models.CharField()
+
+    def __str__ (self):
+        return "{}".format(self.email)
